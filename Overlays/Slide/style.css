@@ -1,0 +1,104 @@
+
+.container {
+    position: relative;
+    width: 50%;
+  }
+  
+  .image {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  
+
+  /* 
+  This .overlay two settings currently give the expand out from middle slide overlay (Slide Overlay Type 1)
+  */  
+  .overlay {
+    position: absolute;
+    bottom: 50%;
+    left: 0;
+    right: 0;
+    background-color: #008CBA;
+    overflow: hidden;
+    width: 100%;
+    height:0;
+    transition: .5s ease;
+  }
+  
+  .container:hover .overlay {
+    bottom: 0;
+    height: 100%;
+  }
+
+  /* 
+  The below unique .overlay styles replace the matching above to give the new Overlay Type
+  */  
+   /* This slide overlay is slide down (Slide Overlay Type 2)  */  
+   .overlay2 {
+    bottom: 100%;
+  }
+   /* This slide overlay is slide agaisnt the image (Slide Overlay Type 3)  */  
+   .overlay3 {
+    bottom: 0;
+  }
+   .container:hover .overlay3 {
+    left: 100%;
+  }
+    /* This slide overlay is slide up (Slide Overlay Type 4)  */ 
+    .overlay4 {
+      bottom: 0;
+    }
+     .container:hover .overlay4 {
+      right: 100%;
+    }
+
+    /* This slide overlay is slide in from right, and exit left (Slide Overlay Type 5)  */ 
+    .overlay5 {
+      bottom: 0;
+      width: 0;
+      height: 100%;
+    } 
+     .container:hover .overlay5 {
+      left: auto;
+      width: 100%;
+    }
+
+  /* This slide overlay is slide in from left (Slide Overlay Type 6)  */   
+  .overlay6 {
+    bottom: 0;
+    width: 0;
+    height: 100%;
+  }
+   .container:hover .overlay6 {
+    right: auto;
+    width: 100%;
+  }
+
+  /* This slide overlay is slide in from right (Slide Overlay Type 7)  */   
+  .overlay7 {
+    bottom: 0;
+    left: 100%;
+    width: 0;
+    height: 100%;
+  }
+   .container:hover .overlay7 {
+    left: 0;
+    width: 100%;
+  }
+
+    /* 
+ ************
+  */  
+
+  .text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fade Overlay</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- 
+***** Single Overlay ***** 
+--> 
+
+<div class="container">
+    <img src="../../img/image.png" alt="" class="image">
+    <div class="overlay">
+      <div class="text">Hello World</div>
+    </div>
+  </div>
+
+<!-- 
+***** Double Overlay ***** 
+--> 
+
+<div class="container">
+    <img src="../../img/image.png" alt="" class="image">
+    <div class="overlay">
+      <div class="text">Hello World</div>
+    </div>
+      <div class="overlay2">
+      <div class="text">Hello</div>
+    </div>
+  </div>
+
+
+
+  <!-- 
+***** Box Overlay ***** 
+--> 
+
+<div class="container">
+    <img src="../../img/image.png" alt="Avatar" class="image" style="width:100%">
+    <div class="middle">
+      <div class="text">Hello</div>
+    </div>
+  </div>
+
+<!-- 
+***** To Turn Box Overlay Into Clickable Link ***** 
+    wrap the div in a <a> tag and add the href attribute.
+    will require extra styling to remove underline 
+    (
+     a {
+        text-decoration: none;
+       }
+    )
+--> 
+<div class="container">
+    <img src="../../img/image.png" alt="Avatar" class="image" style="width:100%">
+    <div class="middle">
+    <a href = "#" target = "_blank">
+    <div class="text" >
+      Hello
+      </div>
+    </a>
+    </div>
+</div>
+
+  
+</body>
+</html>

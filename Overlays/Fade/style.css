@@ -1,0 +1,137 @@
+/* 
+***** Full Body Overlays ***** 
+*/
+.container {
+    position: relative;
+    width: 50%;
+  }
+  
+  .image {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  /* 
+   width: 100%; gives image 1 (full overlay);
+   width: 50%; gives image 2 (half -left- overlay);
+   left: 50%; &  height: auto; &  width: auto; gives image 3 (half-right- overlay)
+  */
+  .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: auto;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #008CBA;
+  }
+  
+  .container:hover .overlay {
+    opacity: 1;
+  }
+  
+  .text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+
+   /* 
+   for double overlays
+  */
+
+   /* 
+   below format gives overlay a lefthand overlay, and overlay 2 a righthand overlay (image 4)
+   this is the outputted css that should be expected
+  */
+  .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    right: 0;
+    height: auto;
+    width: auto;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #008CBA;
+  }
+  .overlay2 {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: auto;
+    width: 50%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #008CBA;
+  }
+
+  .overlay:hover {
+    opacity: 1;
+  }
+  
+  .overlay2:hover {
+    opacity: 1;
+  }
+
+
+
+  /* 
+***** Box Overlays ***** 
+*/
+
+.container {
+  position: relative;
+  width: 50%;
+}
+
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+  /* 
+   changing the top & left values will change the position of the box
+  */
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.container:hover .image {
+  opacity: 0.3;
+}
+
+.container:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  background-color: #4CAF50;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}
